@@ -44,7 +44,7 @@ pipeline {
        stage('Publish Report') {
            steps {
                cucumber buildStatus: 'UNSTABLE',
-                    fileIncludePattern: 'target/cucumber-reports/cucumber.json',
+                    fileIncludePattern: 'target/cucumber.json',
                     trendsLimit: 10
            }
        }
