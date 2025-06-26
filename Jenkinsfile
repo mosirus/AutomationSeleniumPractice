@@ -17,7 +17,7 @@ pipeline {
         stage('Clone Project') {
             steps {
                 checkout([$class: 'GitSCM',
-                    branches: [[name: "${branches}"]],
+                    branches: [[name: "*/main"]],
                     doGenerateSubmoduleConfigurations: false,
                     extensions: [[$class: 'CleanCheckout']],
                     submoduleCfg: [],
