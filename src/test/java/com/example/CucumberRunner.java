@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         plugin = {
                 "pretty",   // Output readable
-                "html:target/cucumber-report.html" //Report HTML
+                "html:target/cucumber-report.html", //Report HTML
+                "json:target/cucumber.json" //Report API
         },
         glue = {"org.example.hooks", "com.example.stepDefinitions"}, // glue for test case UI Automation
 //        glue = {"com.example.stepDefinitions"}, // glue for test case API Automation
